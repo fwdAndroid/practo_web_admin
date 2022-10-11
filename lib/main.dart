@@ -1,4 +1,3 @@
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -9,13 +8,13 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
-            apiKey: "AIzaSyAlh0d4yVbXu2ar3CeoKSSP1FZrggFqCrg",
-            authDomain: "couplejet-c1358.firebaseapp.com",
-            projectId: "couplejet-c1358",
-            storageBucket: "couplejet-c1358.appspot.com",
-            messagingSenderId: "1043565007951",
-            appId: "1:1043565007951:web:2f2e46c7546b31d8b5c63a",
-            measurementId: "G-C2MTTF6TVJ"));
+            apiKey: "AIzaSyCFYDQbl1GHsqwlspoUrs6S7seDRdeozCE",
+            authDomain: "practo-a3748.firebaseapp.com",
+            projectId: "practo-a3748",
+            storageBucket: "practo-a3748.appspot.com",
+            messagingSenderId: "790596251090",
+            appId: "1:790596251090:web:21c82b0ff20e459061ec0b",
+            measurementId: "G-N10HF49HZ2"));
   } else {
     await Firebase.initializeApp();
   }
