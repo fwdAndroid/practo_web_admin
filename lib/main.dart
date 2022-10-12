@@ -2,6 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practo_web_admin/authentication/login_screen.dart';
+import 'package:practo_web_admin/dashboard/hospitalfeed.dart';
+import 'package:practo_web_admin/dashboard/paitent_feed.dart';
 import 'package:practo_web_admin/widgets/side_bar.dart';
 
 void main() async {
@@ -43,7 +45,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: HospitalFeed(),
     );
   }
 }

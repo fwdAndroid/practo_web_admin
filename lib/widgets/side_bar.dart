@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:practo_web_admin/dashboard/chat.dart';
+import 'package:practo_web_admin/dashboard/hospitalfeed.dart';
 import 'package:practo_web_admin/dashboard/dashboard.dart';
 import 'package:practo_web_admin/dashboard/diamond.dart';
 import 'package:practo_web_admin/dashboard/hobby.dart';
 import 'package:practo_web_admin/dashboard/push.dart';
 import 'package:practo_web_admin/dashboard/doctors_feed.dart';
-import 'package:practo_web_admin/dashboard/users.dart';
+import 'package:practo_web_admin/dashboard/paitent_feed.dart';
 import 'package:sidebarx/sidebarx.dart';
 
 class SideDrawer extends StatefulWidget {
@@ -70,12 +70,12 @@ class _SideDrawerState extends State<SideDrawer> {
                 label: 'Doctors',
               ),
               const SidebarXItem(
-                icon: Icons.payment,
-                label: 'Users',
+                icon: Icons.person,
+                label: 'Paitient',
               ),
               const SidebarXItem(
-                icon: Icons.people,
-                label: 'Chats',
+                icon: Icons.paid_outlined,
+                label: 'Hospitals',
               ),
               const SidebarXItem(
                 icon: Icons.branding_watermark_rounded,
@@ -126,9 +126,9 @@ class _ScreensExample extends StatelessWidget {
           case 1:
             return const DoctorsFeed();
           case 2:
-            return const Users();
+            return const PaitientFeed();
           case 3:
-            return const Chat();
+            return const HospitalFeed();
           case 4:
             return const DiamondManager();
           case 5:
