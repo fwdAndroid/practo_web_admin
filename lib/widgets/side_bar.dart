@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:practo_web_admin/dashboard/chat.dart';
 import 'package:practo_web_admin/dashboard/dashboard.dart';
@@ -57,7 +56,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 height: 100,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Image.asset('assets/logo.png'),
+                  child: Image.asset('assets/splash.png'),
                 ),
               );
             },

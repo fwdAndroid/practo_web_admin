@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
-                      "assets/logo.png",
+                      "assets/splash.png",
                       height: 72.73,
                       width: 254,
                     ),
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Container(
                       margin: EdgeInsets.only(left: 30, right: 30),
                       child: TextFormInputField(
-                        hintText: 'Email/UserName',
+                        hintText: 'Email',
                         controller: emailControler,
                         textInputType: TextInputType.text,
                       ),
@@ -66,18 +66,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 30,
                     ),
-                    InkWell(
-                      onTap: () {
+                    ElevatedButton(
+                      child: Text("Login"),
+                      onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (builder) => SideDrawer()));
                       },
-                      child: Image.asset(
-                        "assets/btn.png",
-                        width: 130,
-                        height: 40,
-                      ),
                     )
                   ],
                 ),
