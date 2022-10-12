@@ -4,7 +4,7 @@ import 'package:practo_web_admin/dashboard/dashboard.dart';
 import 'package:practo_web_admin/dashboard/diamond.dart';
 import 'package:practo_web_admin/dashboard/hobby.dart';
 import 'package:practo_web_admin/dashboard/push.dart';
-import 'package:practo_web_admin/dashboard/social_feed.dart';
+import 'package:practo_web_admin/dashboard/doctors_feed.dart';
 import 'package:practo_web_admin/dashboard/users.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -66,8 +66,8 @@ class _SideDrawerState extends State<SideDrawer> {
                 label: 'Dashboard',
               ),
               const SidebarXItem(
-                icon: Icons.history,
-                label: 'Social-Feed',
+                icon: Icons.dashboard_customize_sharp,
+                label: 'Doctors',
               ),
               const SidebarXItem(
                 icon: Icons.payment,
@@ -124,7 +124,7 @@ class _ScreensExample extends StatelessWidget {
           case 0:
             return const Dashboard();
           case 1:
-            return const SocialFeed();
+            return const DoctorsFeed();
           case 2:
             return const Users();
           case 3:
