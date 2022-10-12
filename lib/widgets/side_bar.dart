@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practo_web_admin/dashboard/hospitalfeed.dart';
 import 'package:practo_web_admin/dashboard/dashboard.dart';
-import 'package:practo_web_admin/dashboard/diamond.dart';
+import 'package:practo_web_admin/dashboard/payment_manager.dart';
 import 'package:practo_web_admin/dashboard/hobby.dart';
-import 'package:practo_web_admin/dashboard/push.dart';
 import 'package:practo_web_admin/dashboard/doctors_feed.dart';
 import 'package:practo_web_admin/dashboard/paitent_feed.dart';
 import 'package:sidebarx/sidebarx.dart';
@@ -50,7 +49,6 @@ class _SideDrawerState extends State<SideDrawer> {
               ),
               margin: EdgeInsets.only(right: 10),
             ),
-            footerDivider: divider,
             headerBuilder: (context, extended) {
               return SizedBox(
                 height: 100,
@@ -78,20 +76,8 @@ class _SideDrawerState extends State<SideDrawer> {
                 label: 'Hospitals',
               ),
               const SidebarXItem(
-                icon: Icons.branding_watermark_rounded,
-                label: 'Diamond-Manager',
-              ),
-              const SidebarXItem(
-                icon: Icons.branding_watermark_rounded,
-                label: 'Hobby-Manager',
-              ),
-              const SidebarXItem(
-                icon: Icons.settings,
-                label: 'Push-Notification',
-              ),
-              const SidebarXItem(
-                icon: Icons.logout,
-                label: 'Reports',
+                icon: Icons.payment,
+                label: 'Payment-Manager',
               ),
             ],
           ),
@@ -130,14 +116,9 @@ class _ScreensExample extends StatelessWidget {
           case 3:
             return const HospitalFeed();
           case 4:
-            return const DiamondManager();
+            return const PaymetManager();
+
           case 5:
-            return const Hobby();
-          case 6:
-            return const Push();
-          case 7:
-            return const Dashboard();
-          case 8:
             return const Text('Log Out User');
           default:
             return Text(
@@ -154,5 +135,3 @@ const canvasColor = Colors.white;
 const accentCanvasColor = Colors.black;
 const white = Colors.black;
 final actionColor = Colors.black;
-
-final divider = Divider(color: white.withOpacity(0.3), height: 1);
