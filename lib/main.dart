@@ -5,7 +5,9 @@ import 'package:practo_web_admin/authentication/login_screen.dart';
 import 'package:practo_web_admin/dashboard/hospitalfeed.dart';
 import 'package:practo_web_admin/dashboard/paitent_feed.dart';
 import 'package:practo_web_admin/dashboard/payment_manager.dart';
+import 'package:practo_web_admin/providers/circularprovider.dart';
 import 'package:practo_web_admin/widgets/side_bar.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +25,14 @@ void main() async {
     await Firebase.initializeApp();
   }
 
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CircularProgressProvider()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
